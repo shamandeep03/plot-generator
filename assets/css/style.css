@@ -1,0 +1,122 @@
+
+input[type=button]:disabled,
+button[disabled]{
+  background-color: skyblue;
+}
+.hr hr {
+    border-top: 4px solid skyblue;
+    height: 20px;
+}
+fieldset {
+    max-width: 500px;
+    margin: auto;
+    padding: revert;
+    border: 1px solid #ced4da !important;
+}
+legend {
+    display: block;
+    width: auto;
+}
+input[type=checkbox], input[type=radio] {
+    height: 16px;
+    width: 16px;
+    padding-bottom: 8px;
+}
+.add_section_button {
+    margin: 10px;
+    text-align: end;
+}
+button.remove_name_button {
+    position: absolute;
+    right: 8px;
+    bottom: 376px;
+    width: 36px;
+}
+.name-head {
+    font-size: 22px;
+}
+.name{
+    background: gainsboro;
+    padding: 10px;
+    margin: 11px;
+    margin-left: 32% !important;
+    max-width: 400px;
+    border-radius: 7px;
+}
+#persondetailsResult p {
+    font-size: 20px;
+}
+.nameArea,.areaname{
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.song_area p {
+    font-size: 26px;
+}
+.song_area {
+    padding: 10px !important;
+}
+.name-area {
+    display: flex;
+    justify-content: center;
+}
+.name-area input {
+    width: auto;
+    margin-left: 5px;
+}
+#persondetailsResult h4 {
+    font-weight: bold;
+    text-decoration: underline;
+}
+label{
+    font-size: 16px;
+}
+#detainlsdiv,#persondetailsResult,#persondetails,#persondetailsResult {
+    padding-top: 22px;
+    font-size: 18px;
+    max-width: 650px;
+    text-align: center;
+    padding-bottom: 22px;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    justify-content: center;
+}
+.randomNames.row {
+    padding-top: 22px;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 22px;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    justify-content: center;
+}
+.form-control {
+    width: auto;
+    display: inline;
+    margin-bottom: 6px;
+}
+div#persondetailsResult h3 {
+    font-size: 23px;
+}
+.nameArea h3 {
+    font-size: 25px;
+}
+.row{
+    justify-content: center;
+}
+.small{
+    width: 25%;
+}
+.cover {
+    float: left;
+    margin: 0px 10px 10px 0px;
+    width: auto;
+    height: 300px;
+    padding: 5px;
+    font-size: 40px;
+    text-transform: capitalize;
+    color: white;
+    position: relative;
+    user-select: none;
+}

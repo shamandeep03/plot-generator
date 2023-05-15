@@ -1,0 +1,104 @@
+<div class="container">
+     <div class="row">
+          <div class="col-md-12" id="detainlsdiv">
+               <form>
+                    Need a prompt? Go random!<br> <input type="button" value="Fill entire form with random ideas"
+                         onclick="fillAll()" class="btn btn-primary" id="fill_all">
+                    <input type="button" id="quick_submit" value="Submit" class="btn btn-primary" onclick="getRandomFairyTale()">
+                    <br><br> Your hero (a child)<br>
+                    Name <input type="text" name="protag_firstname" class="form-control" autocapitalize="words">
+                    <input type="text" name="protag_lastname" class="form-control" autocapitalize="words">
+                    <input type="radio" name="protag_gender" value="male">Male
+                    <input type="radio" name="protag_gender" value="female">Female
+                    <input type="button" value="Suggest"
+                         onclick="suggestPerson('protag_firstname','protag_lastname','protag_gender')"
+                         class="btn btn-primary"><br><br>
+
+                    An adjective to describe your hero (e.g. little, brave)<br>
+                    <input type="text" name="hero_adj" class="form-control" autocapitalize="words">
+                    <input type="button" value="Suggest" onclick="suggest('all_person','hero_adj')"
+                         class="btn btn-primary"><br><br>
+
+                    A type of animal (e.g. bear, pig)<br>
+                    <input type="text" name="animal" class="form-control" autocapitalize="words">
+                    <input type="button" value="Suggest" onclick="suggest('animal','animal')" class="btn btn-primary"><br><br>
+
+                    How many of the animals above will be in the story<br>
+                    <select name="number" class="form-control">
+                         <option value="1">one</option>
+                         <option value="2">two</option>
+                         <option value="3" selected="">three</option>
+                         <option value="4">four</option>
+                         <option value="5">five</option>
+                    </select><br><br>
+
+                    An adjective describing the animal(s) in this story (e.g. hairy, scary)<br>
+                    Note: not one relating to size<br>
+                    <input type="text" name="animal_adj" class="form-control" autocapitalize="words">
+                    <input type="button" value="Suggest" onclick="suggest('animal_adj_not_size','animal_adj')"
+                         class="btn btn-primary"><br><br>
+
+                    The name of a forest, woodland or park nearby (e.g. Sherwood Forest) <br>
+                    <input type="text" name="forest" class="form-control" autocapitalize="words">
+                    <input type="button" value="Suggest" onclick="suggest('forest','forest')" class="btn btn-primary"><br><br>
+
+                    The hero's favourite cuddly toy (e.g. Mr Teddy) <br>
+                    <input type="text" name="toy" class="form-control" autocapitalize="words">
+                    <input type="button" value="Suggest" onclick="suggest('toy','toy')" class="btn btn-primary"><br><br>
+
+                    A friend of family member of the hero<br>
+                    Name <input type="text" name="friend_firstname" class="form-control">
+                    <input type="text" name="friend_lastname" class="form-control">
+                    <input type="radio" name="friend_gender" value="male">Male
+                    <input type="radio" name="friend_gender" value="female">Female
+                    <input type="button" value="Suggest"
+                         onclick="suggestPerson('friend_firstname','friend_lastname','friend_gender')"
+                         class="btn btn-primary"><br>
+                    <br>
+
+                    His or her relationship to the hero<br>
+                    <input type="text" name="friend_relationship" class="form-control"><br>
+                    <input type="button" value="Suggest"
+                         onclick="suggest('friend_relationship','friend_relationship')"
+                         class="btn btn-primary"><br><br>
+
+                    A colour (e.g. red, green) <br>
+                    <input type="text" name="colour" class="form-control" autocapitalize="words">
+                    <input type="button" value="Suggest" onclick="suggest('colour','colour')" class="btn btn-primary"><br><br>
+
+                    An item of clothing, singular (e.g. skirt, dungarees) <br>
+                    <input type="text" name="clothing" class="form-control" autocapitalize="words">
+                    <input type="button" value="Suggest" onclick="suggest('clothing','clothing')"
+                         class="btn btn-primary"><br><br>
+
+                    A type of healthy vegetable, plural (e.g. carrots, cabbages) <br>
+                    <input type="text" name="vegetables" class="form-control" autocapitalize="words">
+                    <input type="button" value="Suggest" onclick="suggest('vegetables','vegetables')"
+                         class="btn btn-primary"><br><br>
+
+                    Five unhealthy foods, plural (e.g. biscuits, crisps) <br>
+                    <input type="text" name="unhealthy_food_1" class="form-control" autocapitalize="words">
+                    <input type="button" value="Suggest" onclick="suggest('unhealthy_foods','unhealthy_food_1')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="unhealthy_food_2" class="form-control" autocapitalize="words">
+                    <input type="button" value="Suggest" onclick="suggest('unhealthy_foods','unhealthy_food_2')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="unhealthy_food_3" class="form-control" autocapitalize="words">
+                    <input type="button" value="Suggest" onclick="suggest('unhealthy_foods','unhealthy_food_3')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="unhealthy_food_4" class="form-control" autocapitalize="words">
+                    <input type="button" value="Suggest" onclick="suggest('unhealthy_foods','unhealthy_food_4')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="unhealthy_food_5" class="form-control" autocapitalize="words">
+                    <input type="button" value="Suggest" onclick="suggest('unhealthy_foods','unhealthy_food_5')"
+                         class="btn btn-primary"><br><br>
+<input type="submit" value="Write me a fairytale" class="btn btn-primary">
+               </form>
+          </div>
+     </div>
+     <div class="row">
+          <div class="col-md-12" id="persondetailsResult" style="display: none;">
+               <img src="../ZKZg.gif" height="100px" width="100px" alt="">
+          </div>
+     </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="container">
+     <div class="row">
+          <div class="col-md-12" id="detainlsdiv">
+               <form>
+                    Need a prompt? Go random! <br> <input type="button" value="Fill entire form with random ideas"
+                         onclick="fillAll()" class="btn btn-primary" id="fill_all">
+                    <input type="button" id="quick_submit" value="Submit" class="btn btn-primary" onclick="generateTwist()">
+                    <br><br>
+
+                    Your protagonist<br>
+                    Name <input type="text" name="protag_firstname" class="form-control" autocapitalize="words">
+                    <input type="text" name="protag_lastname" class="form-control" autocapitalize="words">
+                    <input type="radio" name="protag_sex" value="male">Male
+                    <input type="radio" name="protag_sex" value="female">Female
+                    <input type="button" value="Suggest"
+                         onclick="suggestPerson('protag_firstname','protag_lastname','protag_sex')"
+                         class="btn btn-primary"><br><br>
+
+                    Another character<br>
+                    Name <input type="text" name="other_1_firstname" class="form-control" autocapitalize="words">
+                    <input type="text" name="other_1_lastname" class="form-control" autocapitalize="words">
+                    <input type="radio" name="other_1_sex" value="male">Male
+                    <input type="radio" name="other_1_sex" value="female">Female
+                    <input type="button" value="Suggest"
+                         onclick="suggestPerson('other_1_firstname','other_1_lastname','other_1_sex')"
+                         class="btn btn-primary"><br><br>
+
+                    His or her relationship to the protagonist<br>
+                    <input type="text" name="other_1_relationship" class="sizeMedium"><input type="button"
+                         value="Suggest"
+                         onclick="suggestRelationshipWiderScope('other_1_firstname','other_1_lastname','other_1_sex','other_1_title','other_1_relationship')"
+                         class="btn btn-primary"><br><br>
+
+                    And finally, one other character<br>
+                    Name <input type="text" name="other_2_firstname" class="form-control" autocapitalize="words">
+                    <input type="text" name="other_2_lastname" class="form-control" autocapitalize="words">
+                    <input type="radio" name="other_2_sex" value="male">Male
+                    <input type="radio" name="other_2_sex" value="female">Female
+                    <input type="button" value="Suggest"
+                         onclick="suggestPerson('other_2_firstname','other_2_lastname','other_2_sex')"
+                         class="btn btn-primary"><br><br>
+
+                    His or her relationship to the protagonist<br>
+                    <input type="text" name="other_2_relationship" class="sizeMedium"><input type="button"
+                         value="Suggest"
+                         onclick="suggestRelationshipWiderScope('other_2_firstname','other_2_lastname','other_2_sex','other_2_title','other_2_relationship')"
+                         class="btn btn-primary"><br><br>
+
+                    Your story's title<br>
+                    <i>If you don't have one yet, leave blank</i><br>
+                    <input type="text" name="existing_title" class="sizeLarge">
+                    <input type="button" value="Suggest" onclick="suggest('title_ideas','existing_title')"
+                         class="btn btn-primary"><br><br>
+
+                    How many prompts would you like to generate? (1-50)<br>
+                    <input type="text" name="count" class="form-control" value="20"><br>
+                    <div class="row">
+                         <div class="col-md-12" id="persondetailsResult" style="display: none;">
+                              <img src="../ZKZg.gif" height="100px" width="100px" alt="">
+                         </div>
+                    </div>
+               </form>
+          </div>
+     </div>
+</div>

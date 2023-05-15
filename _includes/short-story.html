@@ -1,0 +1,240 @@
+<div class="container">
+     <div class="row">
+          <div class="col-md-12" id="detainlsdiv">
+               <form> <input type="button" value="Fill entire form with random ideas" onclick="fillAll()"
+                         class="btn btn-primary" id="fill_all">
+                    <input type="button" id="quick_submit" value="Submit" class="btn btn-primary"
+                         onclick="getRandomStory()">
+                    <br><input type="hidden" name="seed1" value="9852">
+                    <input type="hidden" name="seed2" value="2592">
+                    <input type="hidden" name="seed3" value="2237">
+                    <input type="hidden" name="seed4" value="9071">
+                    <input type="hidden" name="seed5" value="7636">
+                    <input type="hidden" name="seed6" value="5863">
+                    <input type="hidden" name="seed7" value="8592">
+                    <input type="hidden" name="seed8" value="3674">
+                    <input type="hidden" name="seed9" value="4556">
+                    <input type="hidden" name="seed10" value="6933">
+                    <input type="hidden" name="seed11" value="5747">
+                    Title<br>
+                    <select class="form-control" name="title">
+                         <option value="protag">Name after the protagonist</option>
+                         <option value="enemy">Name after the secondary character</option>
+                         <option value="object">Name after an object from the story</option>
+                         <option value="weather">Name after the weather</option>
+                         <option value="place">Name after the place where it all happens</option>
+                         <option value="random">Random</option>
+                    </select><br>
+                    Opening<br>
+                    <select class="form-control" name="opening">
+                         <option value="2">Set the scene</option>
+                         <option value="1">Launch into action</option>
+                         <option value="0">Focus on a relationship</option>
+                    </select><br>
+                    Conflict<br>
+                    <select class="form-control" name="conflict">
+                         <option value="emotional">Emotional</option>
+                         <option value="violent">Violent</option>
+                         <option value="financial">Financial</option>
+                    </select><br>
+                    Resolution<br>
+                    <select class="form-control" name="resolution">
+                         <option value="happy">Happy</option>
+                         <option value="sad">Sad</option>
+                         <option value="violent">Violent</option>
+                    </select><br>
+                    Your protagonist<br>
+                    Name <input type="text" name="protag_firstname" class="form-control small" autocapitalize="words">
+                    <input type="text" name="protag_lastname" class="form-control small" autocapitalize="words">
+                    <input type="radio" name="protag_sex" value="male">Male
+                    <input type="radio" name="protag_sex" value="female">Female
+                    <input type="button" value="Suggest"
+                         onclick="suggestPerson('protag_firstname','protag_lastname','protag_sex')"
+                         class="btn btn-primary"><br>
+
+                    Your secondary character<br>
+                    <input type="text" name="enemy_firstname" class="form-control small" autocapitalize="words">
+                    <input type="text" name="enemy_lastname" class="form-control small" autocapitalize="words">
+                    <input type="radio" name="enemy_sex" value="male">Male
+                    <input type="radio" name="enemy_sex" value="female">Female
+                    <input type="button" value="Suggest"
+                         onclick="suggestPerson('enemy_firstname','enemy_lastname','enemy_sex')"
+                         class="btn btn-primary"><br>
+
+                    What does the second character want from the protagonist?<br>
+                    (e.g. closure, revenge, a hug)<br>
+                    <input type="text" name="want" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('want','want')" class="btn btn-primary"><br>
+
+                    How does the second character feel about the protagonist?<br>
+                    <input type="radio" name="feel" value="love" checked=""> positively
+                    <input type="radio" name="feel" value="hate"> negatively<br>
+
+                    Something the protagonist would like to say to the second character<br> (e.g. I love you, I am your
+                    father)<br>
+                    <input type="text" name="say" class="form-control">
+                    <input type="button" value="Suggest" onclick="suggest('say','say')" class="btn btn-primary"><br>
+
+                    The name of the place where it all happens<br>
+                    <input type="text" name="town" class="form-control" autocapitalize="words">
+                    <input type="button" value="Suggest" onclick="suggest('town','town')" class="btn btn-primary"><br>
+
+                    How did the protagonist feel about the place?<br>
+                    <input type="radio" name="lovedHated" value="loved" checked=""> positively
+                    <input type="radio" name="lovedHated" value="hated"> negatively <br>
+
+                    A feature of the place (e.g. trees, houses, rivers) <br>
+                    <input type="text" name="feature" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('feature','feature')"
+                         class="btn btn-primary"><br>
+
+                    Two adjectives that could be used to describe that place<br>
+                    <input type="text" name="place_adj1" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('place_adj','place_adj1')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="place_adj2" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('place_adj','place_adj2')"
+                         class="btn btn-primary"><br>
+
+                    Four emotion adjectives (e.g. happy, sad, grumpy)<br>
+                    <input type="text" name="emotion1" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('emotion','emotion1')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="emotion2" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('emotion','emotion2')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="emotion3" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('emotion','emotion3')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="emotion4" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('emotion','emotion4')"
+                         class="btn btn-primary"><br>
+
+                    An adjective that could describe an object<br>
+                    <input type="text" name="obj_adj" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('obj_adj','obj_adj')"
+                         class="btn btn-primary"><br>
+
+                    Six adjectives to describe somebody's character<br>
+                    <input type="text" name="protag_adj1" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('all_character','protag_adj1')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="protag_adj2" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('all_character','protag_adj2')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="enemy_adj2" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('all_character','enemy_adj2')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="enemy_adj1" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('all_character','enemy_adj1')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="event_adj1" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('all_character','event_adj1')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="uncle_adj" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('all_character','uncle_adj')"
+                         class="btn btn-primary"><br>
+
+                    An occasion (e.g. party, holiday, funeral)<br>
+                    <input type="text" name="event" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('event','event')" class="btn btn-primary"><br>
+
+                    Three verbs (e.g. running, rampaging, loving)<br>
+                    <input type="text" name="verbing1" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('verb','verbing1')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="verbing2" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('verb','verbing2')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="verbing3" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('verb','verbing3')"
+                         class="btn btn-primary"><br>
+
+                    Something/somebody vulnerable, singular (e.g. old lady, baby bird, toddler)<br>
+                    <input type="text" name="vulnerable" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('vulnerable','vulnerable')"
+                         class="btn btn-primary"><br>
+
+                    A noun you might compare the main character to (e.g. angel, giant, saint)<br>
+                    <input type="text" name="protag_noun" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('protag_noun','protag_noun')"
+                         class="btn btn-primary"><br>
+
+                    A noun you might compare the other character to (e.g. brute, monster, coward)<br>
+                    <input type="text" name="enemy_noun" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('protag_noun','enemy_noun')"
+                         class="btn btn-primary"><br>
+
+                    A type of music (e.g. reggae, jazz, piano)<br>
+                    <input type="text" name="music_type" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('music_type','music_type')"
+                         class="btn btn-primary"><br>
+
+                    The protagonist's favourite drink, singular (e.g. tea, port, beer)<br>
+                    <input type="text" name="drink" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('drink','drink')" class="btn btn-primary"><br>
+
+                    Two objects<br>
+                    <input type="text" name="object" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('object','object')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="object2" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('object','object2')"
+                         class="btn btn-primary"><br>
+
+                    Currency, plural (e.g. pounds, dollar, euros)<br>
+                    <input type="text" name="currency" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('currency','currency')"
+                         class="btn btn-primary"><br>
+
+                    A noun to do with the weather (e.g. rain, snow, sun)<br>
+                    <input type="text" name="weather_noun" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('weather_noun','weather_noun')"
+                         class="btn btn-primary"><br>
+
+                    Three animals, plural (e.g. dogs, cats, kangaroos)<br>
+                    <input type="text" name="animal1" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('animals','animal1')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="animal2" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('animals','animal2')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="animal3" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('animals','animal3')"
+                         class="btn btn-primary"><br>
+
+                    <br> Two body parts, plural (e.g. legs, arms, hair)<br>
+                    <input type="text" name="bodypart1" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('bodypart','bodypart1')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="bodypart2" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('bodypart','bodypart2')"
+                         class="btn btn-primary"><br>
+
+                    Four adjectives to describe physical characteristics (e.g. big, skinny, ginger)<br>
+                    <input type="text" name="protag_phys_adj1" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('phys_adj','protag_phys_adj1')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="protag_phys_adj2" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('phys_adj','protag_phys_adj2')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="enemy_phys_adj2" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('phys_adj','enemy_phys_adj2')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="enemy_phys_adj1" class="form-control" autocapitalize="off">
+                    <input type="button" value="Suggest" onclick="suggest('phys_adj','enemy_phys_adj1')"
+                         class="btn btn-primary"><br>
+                    <input type="button" value="Write me a short story" class="btn btn-primary">
+               </form>
+          </div>
+     </div>
+     <div class="row">
+          <div class="col-md-4">
+               <div class="cover" id="cover">
+               </div>
+          </div>
+          <div class="col-md-8" id="persondetailsResult" style="display: none;">
+               <img src="../ZKZg.gif" height="100px" width="100px" alt="">
+          </div>
+     </div>
+</div>

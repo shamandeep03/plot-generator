@@ -1,0 +1,26 @@
+<style>
+     .funny {
+    font-size: 20px;
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 16px;
+}
+</style>
+<div class="container">
+     <div class="row">
+          <div class="col-md-12" id="detainlsdiv">
+               <form action="">
+                    <label for="">How many ideas would you like to generate?</label><br>
+                    <input type="text" name="number" value="10" class="form-control">
+                    <input type="button" value="Suggest" onclick="suggest('number','number')" class="btn btn-primary">
+                    <br>
+                    <input type="button" onclick="makeidea()" value="Write me a list of story ideas" class="btn btn-primary">
+               </form>
+          </div>
+     </div>
+     <div class="row">
+          <div class="col-md-12" id="persondetailsResult" style="display: none;">
+               <img src="../ZKZg.gif" height="100px" width="100px" alt="">
+          </div>
+     </div>
+</div>

@@ -1,0 +1,169 @@
+<div class="container">
+     <div class="row">
+          <div class="col-md-12" id="detainlsdiv">
+               <form>
+                    Need a prompt? Go random! <br><input type="button" value="Fill entire form with random ideas"
+                         onclick="fillAll()" class="btn btn-primary" id="fill_all">
+                    <input type="button" id="quick_submit" value="Submit" class="btn btn-primary" onclick="generateRandomScript()">
+                    <br>
+                    What type of story do you wish to tell?<br>
+
+                    <select class="form-control" name="story_type">
+                         <option value="monster">Overcoming the Monster</option>
+
+                    </select>
+                    Choose three locations<br>
+                    <input type="text" name="location1" class="form-control" autocapitalize="words">
+                    <input type="radio" name="location1_type" value="INT">INT
+                    <input type="radio" name="location1_type" value="EXT">EXT
+                    <input type="button" value="Suggest" onclick="suggestFilmLocation('location1','location1_type')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="location2" class="form-control" autocapitalize="words">
+                    <input type="radio" name="location2_type" value="INT">INT
+                    <input type="radio" name="location2_type" value="EXT">EXT
+                    <input type="button" value="Suggest" onclick="suggestFilmLocation('location2','location2_type')"
+                         class="btn btn-primary"><br>
+                    <input type="text" name="location3" class="form-control" autocapitalize="words">
+                    <input type="radio" name="location3_type" value="INT">INT
+                    <input type="radio" name="location3_type" value="EXT">EXT
+                    <input type="button" value="Suggest" onclick="suggestFilmLocation('location3','location3_type')"
+                         class="btn btn-primary"><br>
+
+                    Your protagonist<br>
+                    <fieldset>
+                         Name (title, first name, last name)<br>
+                         <input type="text" name="goodie1_title" size="5" class="form-control small">
+                         <input type="text" name="goodie1_firstname" class="form-control" autocapitalize="words">
+                         <input type="text" name="goodie1_lastname" class="form-control" autocapitalize="words">
+                         <input type="radio" name="goodie1_sex" value="male">Male
+                         <input type="radio" name="goodie1_sex" value="female">Female
+                         <input type="button" value="Suggest"
+                              onclick="suggestTitle('goodie1_firstname','goodie1_lastname','goodie1_sex','goodie1_title')"
+                              class="btn btn-primary"><br>
+                         Two adjectives to describe him or her (e.g. funny, kind)<br>
+                         <input type="text" name="goodie1_adj1" class="form-control">
+                         <input type="button" value="Suggest" onclick="suggest('pos_character','goodie1_adj1')"
+                              class="btn btn-primary"><br>
+                         <input type="text" name="goodie1_adj2" class="form-control">
+                         <input type="button" value="Suggest" onclick="suggest('pos_character','goodie1_adj2')"
+                              class="btn btn-primary"><br>
+                         Job <input type="text" name="goodie1_job" class="form-control">
+                         <input type="button" value="Suggest" onclick="suggest('job','goodie1_job')" class="btn btn-primary">
+                    </fieldset><br> <br>
+
+                    A sidekick<br>
+                    <fieldset>
+                         Name (title, first name, last name)<br>
+                         <input type="text" name="goodie2_title" size="5" class="form-control small">
+                         <input type="text" name="goodie2_firstname" class="form-control" autocapitalize="words">
+                         <input type="text" name="goodie2_lastname" class="form-control" autocapitalize="words">
+                         <input type="radio" name="goodie2_sex" value="male">Male
+                         <input type="radio" name="goodie2_sex" value="female">Female
+                         <input type="button" value="Suggest"
+                              onclick="suggestTitle('goodie2_firstname','goodie2_lastname','goodie2_sex','goodie2_title')"
+                              class="btn btn-primary"><br>
+                         Two adjectives to describe him or her (e.g. funny, kind)<br>
+                         <input type="text" name="goodie3_adj1" class="form-control">
+                         <input type="button" value="Suggest" onclick="suggest('pos_character','goodie3_adj1')"
+                              class="btn btn-primary"><br>
+                         <input type="text" name="goodie3_adj2" class="form-control">
+                         <input type="button" value="Suggest" onclick="suggest('pos_character','goodie3_adj2')"
+                              class="btn btn-primary"><br>
+                         Job <input type="text" name="goodie2_job" class="form-control">
+                         <input type="button" value="Suggest" onclick="suggest('job','goodie2_job')" class="btn btn-primary">
+                    </fieldset><br> <br>
+
+                    A love interest<br>
+                    <fieldset>
+                         Name (title, first name, last name)<br>
+                         <input type="text" name="goodie3_title" size="5" class="form-control small">
+                         <input type="text" name="goodie3_firstname" class="form-control" autocapitalize="words">
+                         <input type="text" name="goodie3_lastname" class="form-control" autocapitalize="words">
+                         <input type="radio" name="goodie3_sex" value="male">Male
+                         <input type="radio" name="goodie3_sex" value="female">Female
+                         <input type="button" value="Suggest"
+                              onclick="suggestTitle('goodie3_firstname','goodie3_lastname','goodie3_sex','goodie3_title')"
+                              class="btn btn-primary"><br>
+                         Two adjectives to describe him or her (e.g. funny, kind)<br>
+                         <input type="text" name="goodie2_adj1" class="form-control">
+                         <input type="button" value="Suggest" onclick="suggest('pos_character','goodie2_adj1')"
+                              class="btn btn-primary"><br>
+                         <input type="text" name="goodie2_adj2" class="form-control">
+                         <input type="button" value="Suggest" onclick="suggest('pos_character','goodie2_adj2')"
+                              class="btn btn-primary"><br>
+                         Job <input type="text" name="goodie3_job" class="form-control">
+                         <input type="button" value="Suggest" onclick="suggest('job','goodie3_job')" class="btn btn-primary">
+                    </fieldset><br> <br>
+
+                    An enemy<br>
+                    <fieldset>
+                         Name (title, first name, last name)<br>
+                         <input type="text" name="baddie1_title" size="5" class="form-control small">
+                         <input type="text" name="baddie1_firstname" class="form-control" autocapitalize="words">
+                         <input type="text" name="baddie1_lastname" class="form-control" autocapitalize="words">
+                         <input type="radio" name="baddie1_sex" value="male">Male
+                         <input type="radio" name="baddie1_sex" value="female">Female
+                         <input type="button" value="Suggest"
+                              onclick="suggestTitle('baddie1_firstname','baddie1_lastname','baddie1_sex','baddie1_title')"
+                              class="btn btn-primary"><br>
+                         Two negative adjectives that could be used to describe people (e.g. mean, destructive)<br>
+                         <input type="text" name="baddie1_adj1" class="form-control">
+                         <input type="button" value="Suggest" onclick="suggest('neg_character','baddie1_adj1')"
+                              class="btn btn-primary"><br>
+                         <input type="text" name="baddie1_adj2" class="form-control">
+                         <input type="button" value="Suggest" onclick="suggest('neg_character','baddie1_adj2')"
+                              class="btn btn-primary"><br>
+                         <br>
+                         Job <input type="text" name="baddie1_job" class="form-control">
+                         <input type="button" value="Suggest" onclick="suggest('job','baddie1_job')" class="btn btn-primary">
+                    </fieldset><br> <br>
+                    A type of monster (e.g. zombie, dragon)
+                    <input type="text" name="baddie_noun" class="form-control small">
+                    <input type="button" value="Suggest" onclick="suggest('baddie','baddie_noun')"
+                         class="btn btn-primary"><br>
+                    Weapons that could be used to defeat that type of monster, plural (e.g. swords, arrows)
+                    <input type="text" name="weapons" class="form-control small">
+                    <input type="button" value="Suggest" onclick="suggest('weapons','weapons')" class="btn btn-primary"><br>
+                    Something precious (e.g. necklace, ring)
+                    <input type="text" name="precious" class="form-control small">
+                    <input type="button" value="Suggest" onclick="suggest('precious','precious')"
+                         class="btn btn-primary"><br>
+                    An adjective to describe the precious object (e.g. gold, magical)
+                    <input type="text" name="precious_adj" class="form-control small">
+                    <input type="button" value="Suggest" onclick="suggest('precious_adj','precious_adj')"
+                         class="btn btn-primary"><br>
+                    A vegetable (e.g. potato, turnip)
+                    <input type="text" name="vegetable" class="form-control small">
+                    <input type="button" value="Suggest" onclick="suggest('vegetable','vegetable')"
+                         class="btn btn-primary"><br>
+                    The protagonist's favourite type of sweet (e.g. chocolate, fruit gums)
+                    <input type="text" name="sweets" class="form-control small">
+                    <input type="button" value="Suggest" onclick="suggest('sweets','sweets')" class="btn btn-primary"><br>
+                    A type of music (e.g. jazz, reggae)
+                    <input type="text" name="music_type" class="form-control small">
+                    <input type="button" value="Suggest" onclick="suggest('music_type','music_type')"
+                         class="btn btn-primary"><br>
+                    A group of victims, plural (e.g. children, swimmers)<br>
+                    <input type="text" name="victims" class="form-control small">
+                    <input type="button" value="Suggest" onclick="suggest('victims','victims')" class="btn btn-primary"><br>
+                    Something bad the monster might do to its victims, (e.g. eat, hit, rob)<br>
+                    <input type="text" name="neg_act" class="form-control small">
+                    <input type="button" value="Suggest" onclick="suggest('neg_act','neg_act')" class="btn btn-primary"><br>
+                    <br>
+                    An embarrassing secret you might reveal at a weak moment (e.g. I'm afraid of sausages)<br>
+                    <input type="text" name="secret" class="form-control small">
+                    <input type="button" value="Suggest" onclick="suggest('secret','secret')" class="btn btn-primary"><br>
+                    <input type="button" value="Write me a movie script" class="btn btn-primary">
+               </form>
+          </div>
+     </div>
+     <div class="row">
+          <div class="col-md-4">
+               <div class="cover" id="cover">
+               </div>
+          </div>
+          <div class="col-md-8" id="persondetailsResult" style="display: none;">
+               <img src="../ZKZg.gif" height="100px" width="100px" alt="">
+          </div>
+     </div>
+</div>

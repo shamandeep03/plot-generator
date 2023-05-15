@@ -1,0 +1,321 @@
+<div class="container">
+     <div class="row">
+          <div class="col-md-12" id="detainlsdiv">
+               <form>
+                    What style of illustrations would you like?<br>
+                    <select class="form-control" name="style">
+                         <option value="watercolour">watercolour</option>
+                         <option value="scrappy">scrappy</option>
+                         <option value="pencil drawing">pencil drawing</option>
+                         <option value="pop art">pop art</option>
+                         <option value="animation">animation</option>
+                         <option value="needle felt">needle felt</option>
+                         <option value="peg doll">peg doll</option>
+                         <option value="manga">manga</option>
+                    </select><br>
+                    The name of the protagonist<br>
+                    <input type="text" name="protag" class="form-control">
+                    <input type="button" value="Suggest" onclick="suggestFirstname('protag')" class="btn btn-primary"><br>
+
+                    Your character's preferred pronouns<br>
+                    <input type="radio" name="pronouns" value="her"> she / her &nbsp;
+                    <input type="radio" name="pronouns" value="his"> he / his &nbsp;
+                    <input type="radio" name="pronouns" value="their" checked=""> they / their &nbsp;<br>
+
+                    Which of these best describes his/her/their physical presense?<br>
+                    <select class="form-control" name="c_type" id="type">
+                         <option value="boy">boy</option>
+                         <option value="girl">girl</option>
+                         <option value="man">man</option>
+                         <option value="woman">woman</option>
+                         <option value="child">child</option>
+                         <option value="person">person</option>
+                         <option value="cat">cat</option>
+                         <option value="dog">dog</option>
+                         <option value="mouse">mouse</option>
+                         <option value="blob fish">blob fish</option>
+                         <option value="rabbit">rabbit</option>
+                         <option value="horse">horse</option>
+                    </select><br>
+
+                    Two adjective to describe your protagonist's physical appearance<br>
+                    <select name="adj1" class="adj form-control" id="boy_1">
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="blonde">blonde</option>
+                         <option value="ginger">ginger</option>
+                         <option value="brunette">brunette</option>
+                         <option value="black-haired">black-haired</option>
+                    </select><select name="other_1_1" class="adj form-control" id="girl_1" style="display:none">
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="blonde">blonde</option>
+                         <option value="ginger">ginger</option>
+                         <option value="brunette">brunette</option>
+                         <option value="black-haired">black-haired</option>
+                    </select><select name="other_1_2" class="adj form-control" id="man_1" style="display:none">
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="blonde">blonde</option>
+                         <option value="ginger">ginger</option>
+                         <option value="brunette">brunette</option>
+                         <option value="black-haired">black-haired</option>
+                    </select><select name="other_1_3" class="adj form-control" id="woman_1" style="display:none">
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="blonde">blonde</option>
+                         <option value="ginger">ginger</option>
+                         <option value="brunette">brunette</option>
+                         <option value="black-haired">black-haired</option>
+                    </select><select name="other_1_4" class="adj form-control" id="child_1" style="display:none">
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="blonde">blonde</option>
+                         <option value="ginger">ginger</option>
+                         <option value="brunette">brunette</option>
+                         <option value="black-haired">black-haired</option>
+                    </select><select name="other_1_5" class="adj form-control" id="person_1" style="display:none">
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="blonde">blonde</option>
+                         <option value="ginger">ginger</option>
+                         <option value="brunette">brunette</option>
+                         <option value="black-haired">black-haired</option>
+                    </select><select name="other_1_6" class="adj form-control" id="cat_1" style="display:none">
+                         <option value="green">green</option>
+                         <option value="blue">blue</option>
+                         <option value="red">red</option>
+                         <option value="yellow">yellow</option>
+                         <option value="purple">purple</option>
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="spiky">spiky</option>
+                         <option value="ginger">ginger</option>
+                         <option value="tabby">tabby</option>
+                         <option value="black">black</option>
+                    </select><select name="other_1_7" class="adj form-control" id="dog_1" style="display:none">
+                         <option value="green">green</option>
+                         <option value="blue">blue</option>
+                         <option value="red">red</option>
+                         <option value="yellow">yellow</option>
+                         <option value="purple">purple</option>
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="spiky">spiky</option>
+                    </select><select name="other_1_8" class="adj form-control" id="mouse_1" style="display:none">
+                         <option value="green">green</option>
+                         <option value="blue">blue</option>
+                         <option value="red">red</option>
+                         <option value="yellow">yellow</option>
+                         <option value="purple">purple</option>
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="spiky">spiky</option>
+                    </select><select name="other_1_9" class="adj form-control" id="blob fish_1" style="display:none">
+                         <option value="green">green</option>
+                         <option value="blue">blue</option>
+                         <option value="red">red</option>
+                         <option value="yellow">yellow</option>
+                         <option value="purple">purple</option>
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="spiky">spiky</option>
+                    </select><select name="other_1_10" class="adj form-control" id="rabbit_1" style="display:none">
+                         <option value="green">green</option>
+                         <option value="blue">blue</option>
+                         <option value="red">red</option>
+                         <option value="yellow">yellow</option>
+                         <option value="purple">purple</option>
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="spiky">spiky</option>
+                    </select><select name="other_1_11" class="adj form-control" id="horse_1" style="display:none">
+                         <option value="green">green</option>
+                         <option value="blue">blue</option>
+                         <option value="red">red</option>
+                         <option value="yellow">yellow</option>
+                         <option value="purple">purple</option>
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="spiky">spiky</option>
+                    </select>
+                    <br><select name="adj2" class="adj form-control" id="boy_2">
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="blonde">blonde</option>
+                         <option value="ginger">ginger</option>
+                         <option value="brunette">brunette</option>
+                         <option value="black-haired">black-haired</option>
+                    </select><select name="other_2_1" class="adj form-control" id="girl_2" style="display:none">
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="blonde">blonde</option>
+                         <option value="ginger">ginger</option>
+                         <option value="brunette">brunette</option>
+                         <option value="black-haired">black-haired</option>
+                    </select><select name="other_2_2" class="adj form-control" id="man_2" style="display:none">
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="blonde">blonde</option>
+                         <option value="ginger">ginger</option>
+                         <option value="brunette">brunette</option>
+                         <option value="black-haired">black-haired</option>
+                    </select><select name="other_2_3" class="adj form-control" id="woman_2" style="display:none">
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="blonde">blonde</option>
+                         <option value="ginger">ginger</option>
+                         <option value="brunette">brunette</option>
+                         <option value="black-haired">black-haired</option>
+                    </select><select name="other_2_4" class="adj form-control" id="child_2" style="display:none">
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="blonde">blonde</option>
+                         <option value="ginger">ginger</option>
+                         <option value="brunette">brunette</option>
+                         <option value="black-haired">black-haired</option>
+                    </select><select name="other_2_5" class="adj form-control" id="person_2" style="display:none">
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="blonde">blonde</option>
+                         <option value="ginger">ginger</option>
+                         <option value="brunette">brunette</option>
+                         <option value="black-haired">black-haired</option>
+                    </select><select name="other_2_6" class="adj form-control" id="cat_2" style="display:none">
+                         <option value="green">green</option>
+                         <option value="blue">blue</option>
+                         <option value="red">red</option>
+                         <option value="yellow">yellow</option>
+                         <option value="purple">purple</option>
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="spiky">spiky</option>
+                         <option value="ginger">ginger</option>
+                         <option value="tabby">tabby</option>
+                         <option value="black">black</option>
+                    </select><select name="other_2_7" class="adj form-control" id="dog_2" style="display:none">
+                         <option value="green">green</option>
+                         <option value="blue">blue</option>
+                         <option value="red">red</option>
+                         <option value="yellow">yellow</option>
+                         <option value="purple">purple</option>
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="spiky">spiky</option>
+                    </select><select name="other_2_8" class="adj form-control" id="mouse_2" style="display:none">
+                         <option value="green">green</option>
+                         <option value="blue">blue</option>
+                         <option value="red">red</option>
+                         <option value="yellow">yellow</option>
+                         <option value="purple">purple</option>
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="spiky">spiky</option>
+                    </select><select name="other_2_9" class="adj form-control" id="blob fish_2" style="display:none">
+                         <option value="green">green</option>
+                         <option value="blue">blue</option>
+                         <option value="red">red</option>
+                         <option value="yellow">yellow</option>
+                         <option value="purple">purple</option>
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="spiky">spiky</option>
+                    </select><select name="other_2_10" class="adj form-control" id="rabbit_2" style="display:none">
+                         <option value="green">green</option>
+                         <option value="blue">blue</option>
+                         <option value="red">red</option>
+                         <option value="yellow">yellow</option>
+                         <option value="purple">purple</option>
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="spiky">spiky</option>
+                    </select><select name="other_2_11" class="adj form-control" id="horse_2" style="display:none">
+                         <option value="green">green</option>
+                         <option value="blue">blue</option>
+                         <option value="red">red</option>
+                         <option value="yellow">yellow</option>
+                         <option value="purple">purple</option>
+                         <option value="tall">tall</option>
+                         <option value="short">short</option>
+                         <option value="spiky">spiky</option>
+                    </select><br>
+
+
+                    Something or someone that the protagonist might be looking for?<br>
+                    <select class="form-control" name="seeking">
+                         <option value="cat">cat</option>
+                         <option value="dog">dog</option>
+                         <option value="mouse">mouse</option>
+                         <option value="cow">cow</option>
+                         <option value="horse">horse</option>
+                         <option value="blob fish">blob fish</option>
+                         <option value="hippo">hippo</option>
+                         <option value="car">car</option>
+                         <option value="truck">truck</option>
+                         <option value="lorry">lorry</option>
+                         <option value="goose">goose</option>
+                         <option value="digger">digger</option>
+                    </select><br>
+
+
+                    Things the protagonist might stumble across whilst looking for the above<br>
+                    <select class="form-control" name="decoy1">
+                         <option value="cat">cat</option>
+                         <option value="dog">dog</option>
+                         <option value="mouse">mouse</option>
+                         <option value="cow">cow</option>
+                         <option value="horse">horse</option>
+                         <option value="blob fish">blob fish</option>
+                         <option value="hippo">hippo</option>
+                         <option value="car">car</option>
+                         <option value="truck">truck</option>
+                         <option value="lorry">lorry</option>
+                         <option value="goose">goose</option>
+                         <option value="digger">digger</option>
+                    </select><br>
+                    <select class="form-control" name="decoy2">
+                         <option value="cat">cat</option>
+                         <option value="dog">dog</option>
+                         <option value="mouse">mouse</option>
+                         <option value="cow">cow</option>
+                         <option value="horse">horse</option>
+                         <option value="blob fish">blob fish</option>
+                         <option value="hippo">hippo</option>
+                         <option value="car">car</option>
+                         <option value="truck">truck</option>
+                         <option value="lorry">lorry</option>
+                         <option value="goose">goose</option>
+                         <option value="digger">digger</option>
+                    </select><br>
+                    <select class="form-control" name="decoy3">
+                         <option value="cat">cat</option>
+                         <option value="dog">dog</option>
+                         <option value="mouse">mouse</option>
+                         <option value="cow">cow</option>
+                         <option value="horse">horse</option>
+                         <option value="blob fish">blob fish</option>
+                         <option value="hippo">hippo</option>
+                         <option value="car">car</option>
+                         <option value="truck">truck</option>
+                         <option value="lorry">lorry</option>
+                         <option value="goose">goose</option>
+                         <option value="digger">digger</option>
+                    </select><br>
+                    <select class="form-control" name="decoy4">
+                         <option value="cat">cat</option>
+                         <option value="dog">dog</option>
+                         <option value="mouse">mouse</option>
+                         <option value="cow">cow</option>
+                         <option value="horse">horse</option>
+                         <option value="blob fish">blob fish</option>
+                         <option value="hippo">hippo</option>
+                         <option value="car">car</option>
+                         <option value="truck">truck</option>
+                         <option value="lorry">lorry</option>
+                         <option value="goose">goose</option>
+                         <option value="digger">digger</option>
+                    </select><br><input type="button" onclick="makeABook()" value="Write me a picture book" class="btn btn-primary">
+               </form>
+          </div>
+     </div>
+</div>

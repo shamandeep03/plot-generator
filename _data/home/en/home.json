@@ -1,0 +1,54 @@
+{
+  "Language": "English",
+  "htmlLangAtt": "en",
+  "h1": "Free Online Number Tools - numbermagics.com",
+  "h2": "Simple, free and easy to use number utilities",
+  "TITLE": "Free Online Number Tools - numbermagics.com",
+  "META": "Simplest collection of useful utilities for working with numbers. Generate number sequences, create random numbers, sort, round, convert numbers, and more.",
+  "keywords": "",
+  "color": "skyblue",
+  "features": [
+    {
+      "url":"/picture-book",
+      "name":"Plot Generator",
+      "description": "Smart Tool for Plot Generator",
+      "color": "#194FE6",
+       "icon": "/assets/images/home-ImResizer.png"
+    },
+    {
+      "url":"/fairy-tale",
+      "name":"fairy tale Generator",
+      "description": "Smart Tool for fairy tale Generator",
+      "color": "#194FE6",
+       "icon": "/assets/images/home-ImResizer.png"
+    },
+    {
+      "url":"/movie-script",
+      "name":"Movie script Generator",
+      "description": "Smart Tool for Movie script Generator",
+      "color": "#194FE6",
+       "icon": "/assets/images/home-ImResizer.png"
+    },
+    {
+      "url":"/opening-line",
+      "name":"Opening line Generator",
+      "description": "Smart Tool for Opening line Generator",
+      "color": "#194FE6",
+       "icon": "/assets/images/home-ImResizer.png"
+    },
+    {
+      "url":"/short-story",
+      "name":"Short story Generator",
+      "description": "Smart Tool for Short story Generator",
+      "color": "#194FE6",
+       "icon": "/assets/images/home-ImResizer.png"
+    },
+    {
+      "url":"/story-ideas",
+      "name":"Short ideas Generator",
+      "description": "Smart Tool for Short ideas Generator",
+      "color": "#194FE6",
+       "icon": "/assets/images/home-ImResizer.png"
+    }
+  ]
+}
